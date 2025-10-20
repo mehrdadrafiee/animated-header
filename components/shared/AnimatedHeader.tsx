@@ -5,18 +5,18 @@ import Image from "next/image";
 import { ArrowUpRightIcon } from "lucide-react";
 import Link from "next/link";
 import { StarIcon } from "lucide-react";
-import ThemeToggle from "../ThemeToggle";
+import ThemeToggle from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { motion } from "motion/react";
 import { AnimatedTabs } from "@/components/shared/AnimatedTabs";
 
-export default function AnimatedTopnav() {
+export default function AnimatedHeader() {
   const [starsCount, setStarsCount] = React.useState(0);
   const [scrollY, setScrollY] = React.useState(0);
 
   const fetchStarsCount = async () => {
-    const res = await fetch("https://api.github.com/repos/mehrdadrafiee/animated-topnav");
+    const res = await fetch("https://api.github.com/repos/mehrdadrafiee/animated-header");
     const data = await res.json();
     setStarsCount(data.stargazers_count || 0);
   };
@@ -72,7 +72,7 @@ export default function AnimatedTopnav() {
           <div className="flex items-center justify-end gap-2">
             <ThemeToggle />
             <Button variant="outline" asChild>
-              <a href="https://github.com/mehrdadrafiee/animated-topnav" className="flex items-center">
+              <a href="https://github.com/mehrdadrafiee/animated-header" target="_blank" className="flex items-center">
                 <GitHubLogoIcon />
                 <StarIcon fill="currentColor" size={16} className="text-yellow-500 mr-1" />
                 {starsCount}
@@ -89,7 +89,7 @@ export default function AnimatedTopnav() {
           <motion.div 
             className="flex justify-center flex-1"
             animate={{ 
-              x: Math.min(scrollY * 0.5, 50) // Move 0.5px right per 1px scroll, max 50px
+              x: Math.min(scrollY * 0.5, 40) // Move 0.5px right per 1px scroll, max 40px
             }}
             transition={{ 
               duration: 0.05,

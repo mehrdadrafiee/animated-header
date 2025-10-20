@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Footer from "@/components/shared/Footer";
-import AnimatedTopnav from "@/components/shared/AnimatedTopnav";
+import AnimatedHeader from "@/components/shared/AnimatedHeader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Animated Top Navigation",
-  description: "A modern, animated top navigation bar built with Next.js and Tailwind CSS.",
+  title: "Animated Header",
+  description: "A Vercel-inspired animated header built with Next.js and Tailwind CSS.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -25,7 +25,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <AnimatedTopnav />
+          <AnimatedHeader />
           {children}
           <Footer />
         </ThemeProvider>
