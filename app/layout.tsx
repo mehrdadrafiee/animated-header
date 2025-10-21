@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Animated Header",
-  description: "A Vercel-inspired animated header built with Next.js and Tailwind CSS.",
+  description: "A Vercel-like animated header built with Next.js and Tailwind CSS.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
