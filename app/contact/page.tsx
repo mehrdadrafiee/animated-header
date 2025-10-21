@@ -109,7 +109,7 @@ export default function Contact() {
                   <h3 className="text-lg font-medium mb-3">Ready to get started?</h3>
                   <p className="text-muted-foreground mb-4">
                     Whether you need a demo, have questions about our platform, 
-                    or want to discuss enterprise solutions, we're here to help!
+                    or want to discuss enterprise solutions, we&apos;re here to help!
                   </p>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li>• Free trial and onboarding</li>

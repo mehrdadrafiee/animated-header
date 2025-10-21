@@ -81,7 +81,7 @@ const Tabs = ({ tabs, selectedTabIndex, setSelectedTab }: { tabs: Tab[]; selecte
             initial={{ ...getHoverAnimationProps(hoveredRect, navRect), opacity: 0 }}
             animate={{ ...getHoverAnimationProps(hoveredRect, navRect), opacity: 1 }}
             exit={{ ...getHoverAnimationProps(hoveredRect, navRect), opacity: 0 }}
-            transition={transition as Transition<any>}
+            transition={transition as Transition<Record<string, unknown>>}
           />
         )}
       </AnimatePresence>
@@ -99,7 +99,7 @@ const Tabs = ({ tabs, selectedTabIndex, setSelectedTab }: { tabs: Tab[]; selecte
               x: `calc(${selectedRect.left - navRect.left - 9}px)`,
               opacity: 1
             }}
-            transition={transition as Transition<any>}
+            transition={transition as Transition<Record<string, unknown>>}
           />
         )}
       </AnimatePresence>

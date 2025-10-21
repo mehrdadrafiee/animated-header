@@ -7,7 +7,7 @@ export default function About() {
           
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-muted-foreground mb-8">
-              We're on a mission to revolutionize how teams work together.
+              We&apos;re on a mission to revolutionize how teams work together.
               We have been helping organizations streamline their workflows and boost 
               productivity through intelligent collaboration tools.
             </p>
