@@ -22,7 +22,7 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="mt-6 flex flex-col items-center gap-6 border-t border-border py-6">
+    <footer className="flex flex-col items-center gap-6 border-t border-border py-6">
       <p className="leading-7 [&:not(:first-child)]:mt-6">
         Inspired by Vercel&apos;s top navigation. ✨
       </p>
